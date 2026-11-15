@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { ContactForm } from "./ContactForm";
 import { SectionIntro } from "../../shared/SectionIntro/SectionIntro";
-import { copy } from "./Contact.copy";
+import type { Locale } from "../../../locale";
+import { messages } from "./Contact.copy";
 
-export function Contact() {
+export function Contact({ locale }: { locale: Locale }) {
+  const copy = messages[locale];
   return (
     <section className="section" id="contact">
       <div className="container split">
@@ -24,7 +26,7 @@ export function Contact() {
             </div>
           </div>
         </div>
-        <ContactForm />
+        <ContactForm locale={locale} />
       </div>
     </section>
   );

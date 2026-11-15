@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Details } from "../../shared/Details/Details";
 import { SectionIntro } from "../../shared/SectionIntro/SectionIntro";
-import { copy } from "./Community.copy";
+import type { Locale } from "../../../locale";
+import { messages } from "./Community.copy";
 
-export function Community() {
+export function Community({ locale }: { locale: Locale }) {
+  const copy = messages[locale];
   return (
     <section className="section cream" id="community">
       <div className="container split">
@@ -13,7 +15,7 @@ export function Community() {
             title={copy.title}
             description={copy.description}
           />
-          <Details
+          <Details locale={locale}
             title={copy.explore}
             description={copy.dialogDescription}
             className="button button-standard secondary mt-5 px-7 py-3.5"

@@ -1,9 +1,11 @@
 "use client";
 
-import { copy } from "./ContactForm.copy";
+import type { Locale } from "../../../locale";
+import { messages } from "./ContactForm.copy";
 import { useContactForm } from "./useContactForm";
 
-export function ContactForm() {
+export function ContactForm({ locale }: { locale: Locale }) {
+  const copy = messages[locale];
   const { sent, handleSubmit, handleInput } = useContactForm();
 
   return (

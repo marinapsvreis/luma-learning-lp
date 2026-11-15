@@ -1,3 +1,8 @@
-export const copy = {
-  skipToContent: "Skip to content",
+export const messages = {
+  en: {
+    skipToContent: "Skip to content",
+  },
+  pt: {
+    skipToContent: "Saltar para o conteúdo",
+  },
 };

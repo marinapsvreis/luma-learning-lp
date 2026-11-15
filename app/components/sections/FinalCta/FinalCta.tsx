@@ -1,10 +1,12 @@
 import { Avatars } from "../../shared/Avatars/Avatars";
 import { Details } from "../../shared/Details/Details";
-import { copy } from "./FinalCta.copy";
+import type { Locale } from "../../../locale";
+import { messages } from "./FinalCta.copy";
 
 const ctaAvatars = [1, 2, 3, 4].map((index) => `/images/cta-learner-${index}.png`);
 
-export function FinalCta() {
+export function FinalCta({ locale }: { locale: Locale }) {
+  const copy = messages[locale];
   return (
     <section className="section section-spacing final-cta center">
       <div className="container">
@@ -13,7 +15,7 @@ export function FinalCta() {
         <p className="lede font-inter text-lg/7 font-normal tracking-normal">{copy.description}</p>
         <div className="actions">
           <a className="button button-standard primary px-7 py-3.5" href="#courses">{copy.browse}</a>
-          <Details
+          <Details locale={locale}
             title={copy.join}
             description={copy.joinDescription}
             className="button button-standard secondary px-7 py-3.5"

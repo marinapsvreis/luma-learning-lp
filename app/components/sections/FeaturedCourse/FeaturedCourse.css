@@ -11,4 +11,5 @@
   .featured .actions { @apply mt-8; }
   .course-meta li { @apply px-3.5 py-1.5; border: 1px solid #ffffff8f; border-radius: .4rem; }
   .featured .text-link { min-height: 2.75rem; }
+  .featured .course-label:lang(pt-PT) { width: max-content; min-width: 10rem; }
 }

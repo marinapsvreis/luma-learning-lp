@@ -46,5 +46,6 @@
     .hero-media::after { left: max(-5%, calc(10px - var(--photo-edge))); }
     .photo-rating { right: max(-5%, calc(-1 * var(--photo-edge))); }
     .photo-courses { top: 6px; width: 213px; height: 56px; }
+    .photo-courses:lang(pt-PT) { width: max-content; }
   }
 }

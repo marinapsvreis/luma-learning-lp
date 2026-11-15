@@ -1,28 +1,30 @@
 import Image, { getImageProps } from "next/image";
 import { Avatars } from "../../shared/Avatars/Avatars";
 import { SectionIntro } from "../../shared/SectionIntro/SectionIntro";
-import { copy } from "./Hero.copy";
+import type { Locale } from "../../../locale";
+import { messages } from "./Hero.copy";
 
 const trustedAvatars = [1, 2, 3].map((index) => `/images/trusted-learner-${index}.png`);
 
-const { props: mobileHero } = getImageProps({
-  src: "/images/hero-mobile.png",
-  alt: copy.imageAlt,
-  width: 346,
-  height: 380,
-  sizes: "min(90vw, 346px)",
-  loading: "eager",
-  fetchPriority: "high",
-});
-const { props: desktopHero } = getImageProps({
-  src: "/images/hero.png",
-  alt: copy.imageAlt,
-  width: 500,
-  height: 520,
-  sizes: "min(42vw, 500px)",
-});
+export function Hero({ locale }: { locale: Locale }) {
+  const copy = messages[locale];
+  const { props: mobileHero } = getImageProps({
+    src: "/images/hero-mobile.png",
+    alt: copy.imageAlt,
+    width: 346,
+    height: 380,
+    sizes: "min(90vw, 346px)",
+    loading: "eager",
+    fetchPriority: "high",
+  });
+  const { props: desktopHero } = getImageProps({
+    src: "/images/hero.png",
+    alt: copy.imageAlt,
+    width: 500,
+    height: 520,
+    sizes: "min(42vw, 500px)",
+  });
 
-export function Hero() {
   return (
     <section className="hero cream">
       <div className="container split hero-inner">

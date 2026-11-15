@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Arrow } from "../../shared/Arrow/Arrow";
 import { Details } from "../../shared/Details/Details";
-import { copy } from "./FeaturedCourse.copy";
+import type { Locale } from "../../../locale";
+import { messages } from "./FeaturedCourse.copy";
 
-export function FeaturedCourse() {
+export function FeaturedCourse({ locale }: { locale: Locale }) {
+  const copy = messages[locale];
   return (
     <section className="section section-spacing featured" id="featured">
       <div className="container split">
@@ -18,7 +20,7 @@ export function FeaturedCourse() {
           <p className="font-inter text-base/7 font-normal tracking-normal">{copy.instructor}</p>
           <ul className="course-meta body-1">{copy.metadata.map((item) => <li key={item}>{item}</li>)}</ul>
           <div className="actions">
-            <Details title={copy.title} description={copy.courseDetails} className="button yellow px-7 py-3.5">{copy.viewCourse}</Details>
+            <Details locale={locale} title={copy.title} description={copy.courseDetails} className="button yellow px-7 py-3.5">{copy.viewCourse}</Details>
             <a href="#courses" className="text-link font-inter text-body-1 font-bold tracking-normal text-center">{copy.browse}{" "}<Arrow /></a>
           </div>
         </div>

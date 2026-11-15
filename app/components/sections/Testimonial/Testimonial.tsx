@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { stats, copy } from "./Testimonial.copy";
+import type { Locale } from "../../../locale";
+import { messages } from "./Testimonial.copy";
 
-export function Testimonial() {
+export function Testimonial({ locale }: { locale: Locale }) {
+  const copy = messages[locale];
   return (
     <section className="section section-spacing testimonial" aria-label={copy.sectionLabel}>
       <div className="container proof">
@@ -19,7 +21,7 @@ export function Testimonial() {
           </figcaption>
         </figure>
         <dl className="stats">
-          {stats.map(([value, label]) => (
+          {copy.stats.map(([value, label]) => (
             <div key={label}>
               <dt className="body-1">{label}</dt>
               <dd className="font-jakarta font-extrabold desktop:text-display">{value}</dd>

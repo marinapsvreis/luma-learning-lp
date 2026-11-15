@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { footerGroups, copy } from "./Footer.copy";
+import type { Locale } from "../../../locale";
+import { messages } from "./Footer.copy";
 
-export function Footer() {
+export function Footer({ locale }: { locale: Locale }) {
+  const copy = messages[locale];
   return (
     <footer className="site-footer">
       <div className="container">
@@ -12,7 +14,7 @@ export function Footer() {
             </a>
             <p className="body-1">{copy.description}</p>
           </div>
-          {footerGroups.map(({ name, links }) => (
+          {copy.footerGroups.map(({ name, links }) => (
             <nav aria-label={name} key={name}>
               <h2 className="uppercase-label">{name}</h2>
               <ul className="body-1">

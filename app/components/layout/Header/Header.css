@@ -42,6 +42,13 @@
     .header-actions > .button { @apply px-3; }
   }
 
+  @media (58rem <= width < 75rem) {
+    .site-menu, .site-menu.is-open { flex: 1; margin-inline-start: 2rem; }
+    .site-menu-content { justify-content: space-between; }
+    .site-menu nav { position: static; transform: none; }
+    .site-menu nav, .header-actions { gap: 1rem; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .site-menu, .menu-toggle path { transition: none; }
   }

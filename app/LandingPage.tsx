@@ -8,24 +8,26 @@ import { Header } from "./components/layout/Header/Header";
 import { Hero } from "./components/sections/Hero/Hero";
 import { HowItWorks } from "./components/sections/HowItWorks/HowItWorks";
 import { Testimonial } from "./components/sections/Testimonial/Testimonial";
-import { copy } from "./page.copy";
+import type { Locale } from "./locale";
+import { messages } from "./page.copy";
 
-export default function Home() {
+export function LandingPage({ locale }: { locale: Locale }) {
+  const copy = messages[locale];
   return (
     <>
       <a className="skip-link" href="#main">{copy.skipToContent}</a>
-      <Header />
+      <Header locale={locale} />
       <main id="main">
-        <Hero />
-        <Categories />
-        <FeaturedCourse />
-        <HowItWorks />
-        <Testimonial />
-        <Community />
-        <Contact />
-        <FinalCta />
+        <Hero locale={locale} />
+        <Categories locale={locale} />
+        <FeaturedCourse locale={locale} />
+        <HowItWorks locale={locale} />
+        <Testimonial locale={locale} />
+        <Community locale={locale} />
+        <Contact locale={locale} />
+        <FinalCta locale={locale} />
       </main>
-      <Footer />
+      <Footer locale={locale} />
     </>
   );
 }
