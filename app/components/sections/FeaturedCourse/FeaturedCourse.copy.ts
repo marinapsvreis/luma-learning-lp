@@ -3,11 +3,13 @@ export const messages = {
     metadata: ["8 lessons", "2h 40min", "Intermediate"],
     browse: "Browse all courses",
     imageAlt: "Designer assembling prototypes at a worktable",
-    courseDetails: "Join Maya Chen for 8 intermediate lessons on product design, from research and workflow mapping to interaction design. Total duration 2h 40min.",
+    courseDetails:
+      "Join Maya Chen for 8 intermediate lessons on product design, from research and workflow mapping to interaction design. Total duration 2h 40min.",
     badge: "Featured course",
     eyebrow: "Most popular this month",
     title: "Designing products people understand.",
-    description: "Learn how to turn complex workflows into simple, intentional product experiences through research, structure and thoughtful interaction design.",
+    description:
+      "Learn how to turn complex workflows into simple, intentional product experiences through research, structure and thoughtful interaction design.",
     instructor: "with Maya Chen · Senior Product Designer",
     viewCourse: "View course",
   },
@@ -15,11 +17,13 @@ export const messages = {
     metadata: ["8 aulas", "2h 40min", "Intermediário"],
     browse: "Ver todos os cursos",
     imageAlt: "Designer montando protótipos em uma bancada de trabalho",
-    courseDetails: "Acompanhe Maya Chen em 8 aulas de nível intermediário sobre design de produto, da pesquisa ao design de interação. Duração total de 2h 40min.",
+    courseDetails:
+      "Acompanhe Maya Chen em 8 aulas de nível intermediário sobre design de produto, da pesquisa ao design de interação. Duração total de 2h 40min.",
     badge: "Curso em destaque",
     eyebrow: "Mais popular do mês",
     title: "Crie produtos que as pessoas entendem.",
-    description: "Aprenda a transformar processos complexos em experiências simples e bem pensadas com pesquisa, estrutura e design de interação.",
+    description:
+      "Aprenda a transformar processos complexos em experiências simples e bem pensadas com pesquisa, estrutura e design de interação.",
     instructor: "com Maya Chen · Designer de Produto Sénior",
     viewCourse: "Ver curso",
   },

@@ -1,25 +1,69 @@
 @layer components {
-  .site-footer { padding-top: 3rem; color: #fff; background: var(--color-ink); }
-  .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 1rem; margin-bottom: 2rem; }
-  .footer-brand { grid-column: 1 / -1; }
-  .footer-grid h2 { color: white; margin-bottom: .8rem; }
-  .footer-grid p, .footer-grid li { color: var(--color-footer-muted); }
-  .footer-grid p { margin-top: .3rem; }
-  .footer-grid li + li { margin-top: .65rem; }
-  .copyright { text-align: center; padding-block: 1.15rem; border-top: 1px solid #525563; }
+  .site-footer {
+    padding-top: 3rem;
+    color: #fff;
+    background: var(--color-ink);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1rem;
+    margin-bottom: 2rem;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+  .footer-grid h2 {
+    color: white;
+    margin-bottom: 0.8rem;
+  }
+  .footer-grid p,
+  .footer-grid li {
+    color: var(--color-footer-muted);
+  }
+  .footer-grid p {
+    margin-top: 0.3rem;
+  }
+  .footer-grid li + li {
+    margin-top: 0.65rem;
+  }
+  .copyright {
+    text-align: center;
+    padding-block: 1.15rem;
+    border-top: 1px solid #525563;
+  }
 }
 
 @layer utilities {
   @media (min-width: 40rem) {
-    .footer-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   @media (min-width: 58rem) {
-    .footer-grid { grid-template-columns: 2fr repeat(3, 1fr); margin-bottom: 3.5rem; }
-    .footer-brand { grid-column: auto; }
-    .footer-brand p { max-width: 24ch; }
-    .site-footer { @apply pt-20 pb-10; }
-    .site-footer > .container { width: min(calc(100% - 2 * var(--spacing-section-gutter)), var(--spacing-page-max)); }
-    .copyright { padding-bottom: 0; text-align: left; }
+    .footer-grid {
+      grid-template-columns: 2fr repeat(3, 1fr);
+      margin-bottom: 3.5rem;
+    }
+    .footer-brand {
+      grid-column: auto;
+    }
+    .footer-brand p {
+      max-width: 24ch;
+    }
+    .site-footer {
+      @apply pt-20 pb-10;
+    }
+    .site-footer > .container {
+      width: min(
+        calc(100% - 2 * var(--spacing-section-gutter)),
+        var(--spacing-page-max)
+      );
+    }
+    .copyright {
+      padding-bottom: 0;
+      text-align: left;
+    }
   }
 }

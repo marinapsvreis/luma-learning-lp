@@ -1,7 +1,11 @@
 export const messages = {
   en: {
     imageAlt: "Learner working on a laptop",
-    descriptionLines: ["Practical courses taught by people who do the work", "every day. Learn design, technology, business and more", "— one focused lesson at a time."],
+    descriptionLines: [
+      "Practical courses taught by people who do the work",
+      "every day. Learn design, technology, business and more",
+      "— one focused lesson at a time.",
+    ],
     learners: "learners",
     expertLedCourses: "expert-led courses",
     averageRating: "4.9 avg rating",
@@ -14,7 +18,11 @@ export const messages = {
   },
   pt: {
     imageAlt: "Pessoa a estudar num computador portátil",
-    descriptionLines: ["Cursos práticos com quem faz esse trabalho", "todos os dias. Aprenda design, tecnologia, negócios e mais", "— uma aula de cada vez."],
+    descriptionLines: [
+      "Cursos práticos com quem faz esse trabalho",
+      "todos os dias. Aprenda design, tecnologia, negócios e mais",
+      "— uma aula de cada vez.",
+    ],
     learners: "alunos",
     expertLedCourses: "cursos com especialistas",
     averageRating: "Nota média 4,9",

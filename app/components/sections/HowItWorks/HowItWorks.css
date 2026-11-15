@@ -1,25 +1,90 @@
 @layer components {
-  .steps { --step-gap: 2.5rem; display: grid; gap: var(--step-gap); margin-top: clamp(2rem, 7.5vw, 6rem); }
-  .steps li { position: relative; }
-  .step-icon { @apply mb-6 size-14; position: relative; display: block; border-radius: .65rem; }
-  .step-icon::after { content: ""; position: absolute; }
-  .step-1 { background: var(--color-pale-blue); border-radius: 50%; }
-  .step-1::after { @apply size-6; background: var(--color-blue); left: 14%; top: 14%; border-radius: .32rem; }
-  .step-2 { background: var(--color-apricot); transform: rotate(12deg); }
-  .step-2::after { @apply size-7; background: #FF704D; right: 3px; bottom: 10%; border-radius: 50%; }
-  .step-3 { background: #FFF1C2; }
-  .step-3::after { @apply size-5; background: #E9D659; left: 14%; bottom: 14%; border-radius: 50%; }
-  .step-label { @apply mb-2; color: var(--color-muted); }
-  .steps li > p:last-child { color: var(--color-muted); @apply mt-3; max-width: 37ch; }
+  .steps {
+    --step-gap: 2.5rem;
+    display: grid;
+    gap: var(--step-gap);
+    margin-top: clamp(2rem, 7.5vw, 6rem);
+  }
+  .steps li {
+    position: relative;
+  }
+  .step-icon {
+    @apply mb-6 size-14;
+    position: relative;
+    display: block;
+    border-radius: 0.65rem;
+  }
+  .step-icon::after {
+    content: "";
+    position: absolute;
+  }
+  .step-1 {
+    background: var(--color-pale-blue);
+    border-radius: 50%;
+  }
+  .step-1::after {
+    @apply size-6;
+    background: var(--color-blue);
+    left: 14%;
+    top: 14%;
+    border-radius: 0.32rem;
+  }
+  .step-2 {
+    background: var(--color-apricot);
+    transform: rotate(12deg);
+  }
+  .step-2::after {
+    @apply size-7;
+    background: #ff704d;
+    right: 3px;
+    bottom: 10%;
+    border-radius: 50%;
+  }
+  .step-3 {
+    background: #fff1c2;
+  }
+  .step-3::after {
+    @apply size-5;
+    background: #e9d659;
+    left: 14%;
+    bottom: 14%;
+    border-radius: 50%;
+  }
+  .step-label {
+    @apply mb-2;
+    color: var(--color-muted);
+  }
+  .steps li > p:last-child {
+    color: var(--color-muted);
+    @apply mt-3;
+    max-width: 37ch;
+  }
 }
 
 @layer utilities {
   @media (min-width: 58rem) {
-    .steps { position: relative; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .steps::before { content: ""; position: absolute; top: 1.75rem; left: 1.75rem; right: calc((100% - 2 * var(--step-gap)) / 3 - 1.75rem); border-top: 1px solid var(--color-line); }
+    .steps {
+      position: relative;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .steps::before {
+      content: "";
+      position: absolute;
+      top: 1.75rem;
+      left: 1.75rem;
+      right: calc((100% - 2 * var(--step-gap)) / 3 - 1.75rem);
+      border-top: 1px solid var(--color-line);
+    }
   }
 
   @media (max-width: 57.999rem) {
-    .steps li + li::before { content: ""; display: block; width: 1px; height: 2.4rem; margin: -1.1rem 0 0 1.75rem; background: var(--color-line); }
+    .steps li + li::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 2.4rem;
+      margin: -1.1rem 0 0 1.75rem;
+      background: var(--color-line);
+    }
   }
 }

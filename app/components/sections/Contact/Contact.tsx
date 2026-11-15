@@ -17,12 +17,31 @@ export function Contact({ locale }: { locale: Locale }) {
           />
           <div className="contact-info body-1">
             <div>
-              <span className="info-icon"><Image src="/images/contact-email.svg" alt="" width={24} height={24} /></span>
-              <p>{copy.emailLabel}{" "}<a href="mailto:contact@luma.com">contact@luma.com</a></p>
+              <span className="info-icon">
+                <Image
+                  src="/images/contact-email.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
+              </span>
+              <p>
+                {copy.emailLabel}{" "}
+                <a href="mailto:contact@luma.com">contact@luma.com</a>
+              </p>
             </div>
             <div>
-              <span className="info-icon"><Image src="/images/contact-response-time.svg" alt="" width={20} height={20} /></span>
-              <p>{copy.responseTime}{" "}<span>{copy.responseWindow}</span></p>
+              <span className="info-icon">
+                <Image
+                  src="/images/contact-response-time.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                />
+              </span>
+              <p>
+                {copy.responseTime} <span>{copy.responseWindow}</span>
+              </p>
             </div>
           </div>
         </div>

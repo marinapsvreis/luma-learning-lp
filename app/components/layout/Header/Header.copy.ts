@@ -5,7 +5,8 @@ export const messages = {
     homeLabel: "Luma home",
     navigationLabel: "Main navigation",
     loginTitle: "Log in to Luma",
-    loginDescription: "Have a question about accessing your learning account? Contact the Luma team for help.",
+    loginDescription:
+      "Have a question about accessing your learning account? Contact the Luma team for help.",
     login: "Log in",
     start: "Start learning",
     navigation: [
@@ -22,10 +23,16 @@ export const messages = {
     homeLabel: "Página inicial da Luma",
     navigationLabel: "Navegação principal",
     loginTitle: "Entre na Luma",
-    loginDescription: "Tem dúvidas sobre o acesso à sua conta? Contacte a equipa da Luma.",
+    loginDescription:
+      "Tem dúvidas sobre o acesso à sua conta? Contacte a equipa da Luma.",
     login: "Entrar",
     start: "Começar a aprender",
     languages: "Idioma da página",
-    navigation: [["Cursos", "#courses"], ["Para equipas", "#contact"], ["Comunidade", "#community"], ["Sobre", "#how-it-works"]],
+    navigation: [
+      ["Cursos", "#courses"],
+      ["Para equipas", "#contact"],
+      ["Comunidade", "#community"],
+      ["Sobre", "#how-it-works"],
+    ],
   },
 };
