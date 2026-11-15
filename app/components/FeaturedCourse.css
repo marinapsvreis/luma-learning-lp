@@ -1,0 +1,14 @@
+@layer components {
+  .featured { color: white; background: var(--color-blue); }
+  .featured .eyebrow { color: inherit; }
+  .featured h2 { text-wrap: wrap; }
+  .featured h2 + p { @apply mt-5; }
+  .featured h2 + p + p { @apply mt-6; }
+  .course-media { position: relative; }
+  .course-media img { display: block; width: 100%; height: auto; border-radius: .8rem; }
+  .featured .course-label { @apply inline-flex w-40 items-center justify-center whitespace-nowrap px-3 py-1.5; position: absolute; top: -.6rem; left: -.65rem; color: var(--color-ink); background: var(--color-yellow); border-radius: .3rem; }
+  .course-meta { @apply mt-6; display: flex; flex-wrap: wrap; gap: .6rem; }
+  .featured .actions { @apply mt-8; }
+  .course-meta li { @apply px-3.5 py-1.5; border: 1px solid #ffffff8f; border-radius: .4rem; }
+  .featured .text-link { min-height: 2.75rem; }
+}

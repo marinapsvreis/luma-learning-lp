@@ -1,0 +1,8 @@
+@layer components {
+  .contact-copy { max-width: 33rem; }
+  .contact-info { @apply gap-4; display: grid; margin-top: 1.7rem; }
+  .contact-info > div { @apply px-5 py-6.5; display: flex; align-items: center; gap: .8rem; border-radius: .65rem; background: var(--color-cream); }
+  .info-icon { @apply p-2; display: grid; place-items: center; flex-shrink: 0; border-radius: .5rem; background: var(--color-lavender); }
+  .contact-info p > * { display: block; color: var(--color-muted); }
+  .contact-info a { color: var(--color-blue); }
+}

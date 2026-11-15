@@ -20,6 +20,7 @@ pnpm start
 
 ## Decisions and known gaps
 
+- The route composes section components. Tailwind utilities handle common responsive layouts and typography. Shared Figma tokens live in `app/styles/theme.css`, and styles specific to a section or interaction sit beside the corresponding component.
 - The mobile and desktop screenshots guided section order and spacing. Tablet uses a two-column category grid and stacks the major page sections until the desktop breakpoint.
 - The header stays visible while scrolling. The supplied mobile design showed the menu closed, so the expanded menu uses vertically stacked navigation links and two side-by-side action buttons. Its opening animation respects reduced-motion preferences.
 - The contact form uses English throughout to match the rest of the page. The learning steps use the mobile reference's sequential numbering on both layouts.
@@ -31,4 +32,4 @@ pnpm start
 
 ## AI and verification
 
-Codex helped extract requirements, compare the supplied desktop and mobile screenshots, implement the page and run checks. The initial production build passed. Later changes were checked with TypeScript, Tailwind compilation and SVG rendering where applicable. A fresh production build and a complete desktop and mobile browser check are still pending.
+Codex helped extract requirements, compare the supplied desktop and mobile screenshots, implement the page and run checks. The latest production build passed, including TypeScript and Tailwind compilation. The generated HTML and CSS were checked for the main sections, responsive utilities and theme tokens. A complete desktop and mobile browser check is still pending.

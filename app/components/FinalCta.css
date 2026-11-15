@@ -1,0 +1,12 @@
+@layer components {
+  .final-cta { position: relative; isolation: isolate; overflow: hidden; background: var(--color-cta); }
+  .final-cta h2 { margin-top: 1.45rem; }
+  .final-cta .lede { margin-inline: auto; }
+  .final-cta .actions { justify-content: center; }
+}
+
+@layer utilities {
+  @media (min-width: 58rem) {
+    .final-cta { background-image: url("/images/cta-decorations.svg"); background-size: auto 100%; background-position: center; background-repeat: repeat-x; }
+  }
+}
