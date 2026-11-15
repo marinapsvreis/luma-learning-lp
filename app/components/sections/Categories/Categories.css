@@ -27,8 +27,14 @@
   }
   .category .text-link {
     @apply font-inter text-body-1 font-bold tracking-normal;
+    color: #171b2c;
     margin-top: auto;
     padding-top: 0.5rem;
+    text-decoration: none;
+  }
+  .category .text-link:hover,
+  .category .text-link:focus-visible {
+    color: var(--color-blue);
   }
 }
 
