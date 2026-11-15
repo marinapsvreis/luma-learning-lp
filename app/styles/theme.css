@@ -29,4 +29,5 @@
   --spacing-page-gutter: 1.25rem;
   --spacing-section-gutter: 5rem;
   --spacing-section-block: 6.25rem;
+  --default-transition-duration: 180ms;
 }

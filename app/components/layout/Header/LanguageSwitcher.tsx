@@ -18,7 +18,7 @@ export function LanguageSwitcher({ locale }: { locale: Locale }) {
             aria-label={label}
             aria-current={option === locale ? "page" : undefined}
             title={label}
-            className="grid size-8 place-items-center rounded-md hover:bg-pale-blue aria-[current=page]:bg-pale-blue aria-[current=page]:ring-1 aria-[current=page]:ring-blue"
+            className="interactive-transition grid size-8 place-items-center rounded-md hover:bg-pale-blue aria-[current=page]:bg-pale-blue aria-[current=page]:ring-1 aria-[current=page]:ring-blue"
           >
             <Image src={flag} alt="" width={22} height={15} className="rounded-sm" />
           </a>
