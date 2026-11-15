@@ -15,9 +15,11 @@ export function LandingPage({ locale }: { locale: Locale }) {
   const copy = messages[locale];
   return (
     <>
-      <a className="skip-link" href="#main">{copy.skipToContent}</a>
+      <a className="skip-link" href="#main">
+        {copy.skipToContent}
+      </a>
       <Header locale={locale} />
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         <Hero locale={locale} />
         <Categories locale={locale} />
         <FeaturedCourse locale={locale} />

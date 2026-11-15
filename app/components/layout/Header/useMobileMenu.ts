@@ -13,7 +13,11 @@ export function useMobileMenu() {
   }
 
   function handleKeyDown(event: KeyboardEvent<HTMLElement>) {
-    if (event.key === "Escape" && open) {
+    if (
+      event.key === "Escape" &&
+      open &&
+      !(event.target instanceof Element && event.target.closest("dialog"))
+    ) {
       closeMenu();
       toggleRef.current?.focus();
     }

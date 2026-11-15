@@ -15,8 +15,15 @@ Open [English](http://localhost:3000/) or [Português de Portugal](http://localh
 
 ```sh
 pnpm build
+pnpm test
 pnpm start
 ```
+
+Set `SITE_URL` to the public deployment origin before building to enable canonical URLs, language alternates and social preview images. Each language includes its own title, description and sharing metadata.
+
+## Quality checks
+
+Run `pnpm lint` for the Next.js, React and accessibility rules, and `pnpm format` to apply Prettier formatting. GitHub Actions runs lint, `pnpm format:check`, the production build and the production HTML tests on pull requests and pushes to `main`.
 
 ## Decisions and known gaps
 
@@ -28,10 +35,11 @@ pnpm start
 - The contact form follows the selected page language across breakpoints. The learning steps use the mobile reference's sequential numbering on both layouts.
 - Navigation uses in-page links where relevant. Without prototype destinations, course details, category details, account and community actions use local dialogs. Footer destinations without dedicated pages point to related sections. Contact submission is simulated in the browser.
 - The hero uses separate Figma image exports for mobile and desktop to preserve each crop. The learner avatars, featured course photo, Alex Morgan’s portrait and community collage also use Figma exports.
+- Next.js serves responsive image variants. The hero is prioritized and below-the-fold images are lazy-loaded. Inter and Plus Jakarta Sans are served as local variable WOFF2 fonts through `next/font`.
 - The final call-to-action decoration repeats horizontally on wide desktop screens. Shapes keep their proportions and can be clipped at the section edge. The mobile reference uses a plain background. Decorative placement is approximate.
 - The development and build scripts use webpack because Turbopack's worker resolved to an inactive Node.js shim on the Windows development host.
 - Approximate total time spent on implementation, design refinements and checks: 5 hours.
 
 ## AI and verification
 
-Codex helped extract requirements, compare the supplied desktop and mobile screenshots, implement and localize the page, and run checks. The production build passed for both routes, including TypeScript and Tailwind compilation. The generated HTML was checked for localized content, document language, switcher links and the active-language marker. A complete desktop and mobile browser check is still pending.
+Codex helped extract requirements, compare the supplied desktop and mobile screenshots, implement and localize the page, and run checks. The production build passed for both routes, including TypeScript and Tailwind compilation. The automated test checks the generated HTML for localized content, metadata, heading structure, internal links, image attributes and form field order. It also checks that the build emits two local WOFF2 fonts. The author separately checked the page in the browser.

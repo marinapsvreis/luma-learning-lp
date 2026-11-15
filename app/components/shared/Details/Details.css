@@ -1,8 +1,36 @@
 @layer components {
-  .dialog { position: fixed; inset: 0; margin: auto; width: min(31rem, calc(100% - 2rem)); max-height: calc(100% - 2rem); overflow: auto; padding: 2rem; border-radius: .85rem; background: white; color: var(--color-ink); }
-  .dialog::backdrop { background: #161b2daa; }
-  .dialog h2 { font-size: 1.75rem; padding-right: 1.5rem; }
-  .dialog p { margin-block: 1rem; color: var(--color-muted); }
-  .dialog-close { position: absolute; top: .65rem; right: .65rem; }
-  .dialog-close button { width: 2rem; height: 2rem; font-size: 1.5rem; }
+  .dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: min(31rem, calc(100% - 2rem));
+    max-height: calc(100% - 2rem);
+    overflow: auto;
+    overscroll-behavior: contain;
+    padding: 2rem;
+    border-radius: 0.85rem;
+    background: white;
+    color: var(--color-ink);
+  }
+  .dialog::backdrop {
+    background: #161b2daa;
+  }
+  .dialog h2 {
+    font-size: 1.75rem;
+    padding-right: 1.5rem;
+  }
+  .dialog p {
+    margin-block: 1rem;
+    color: var(--color-muted);
+  }
+  .dialog-close {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.65rem;
+  }
+  .dialog-close button {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+  }
 }

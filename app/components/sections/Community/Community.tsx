@@ -15,7 +15,8 @@ export function Community({ locale }: { locale: Locale }) {
             title={copy.title}
             description={copy.description}
           />
-          <Details locale={locale}
+          <Details
+            locale={locale}
             title={copy.explore}
             description={copy.dialogDescription}
             className="button button-standard secondary mt-5 px-7 py-3.5"
@@ -23,7 +24,14 @@ export function Community({ locale }: { locale: Locale }) {
             {copy.explore}
           </Details>
         </div>
-        <Image className="h-auto w-full rounded-lg" src="/images/community.png" alt={copy.imageAlt} width={535} height={530} sizes="(min-width: 58rem) 42vw, 90vw" />
+        <Image
+          className="h-auto w-full rounded-lg"
+          src="/images/community.png"
+          alt={copy.imageAlt}
+          width={535}
+          height={530}
+          sizes="(min-width: 58rem) min(46vw, 544px), calc(100vw - 40px)"
+        />
       </div>
     </section>
   );

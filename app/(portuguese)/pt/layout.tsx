@@ -1,10 +1,13 @@
-import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { SiteLayout } from "../../SiteLayout";
-import { messages } from "../../layout.copy";
+import { getSiteMetadata } from "../../siteMetadata";
 
-export const metadata: Metadata = messages.pt;
+export const metadata = getSiteMetadata("pt");
 
-export default function PortugueseLayout({ children }: { children: ReactNode }) {
+export default function PortugueseLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return <SiteLayout locale="pt">{children}</SiteLayout>;
 }

@@ -1,6 +1,8 @@
 @theme static {
-  --font-inter: "Inter Variable", Arial, sans-serif;
-  --font-jakarta: "Plus Jakarta Sans Variable", var(--font-inter);
+  --font-inter: var(--font-inter-local), Arial, sans-serif;
+  --font-jakarta: var(--font-jakarta-local), var(--font-inter);
+  --header-desktop-height: 70px;
+  --header-mobile-height: calc(6rem + 1px);
   --text-body-1: 0.875rem;
   --text-body-1--line-height: 1.5rem;
   --text-display: 4rem;
@@ -12,15 +14,15 @@
 
   --color-ink: #161b2d;
   --color-muted: #686d7b;
-  --color-blue: #3157F6;
-  --color-pale-blue: #E2E8FF;
+  --color-blue: #3157f6;
+  --color-pale-blue: #e2e8ff;
   --color-cream: #f8f6f0;
   --color-line: #dbe0ee;
   --color-lavender: #e0e6ff;
   --color-yellow: #ffef80;
   --color-peach: #ffc99e;
-  --color-apricot: #FFCB9F;
-  --color-form-border: #DBDFEB;
+  --color-apricot: #ffcb9f;
+  --color-form-border: #dbdfeb;
   --color-cta: #fff1c1;
   --color-footer-muted: #a8adbc;
 
