@@ -1,10 +1,5 @@
 import Image from "next/image";
-
-const footerGroups = [
-  { name: "Explore", links: [["Courses", "#courses"], ["Categories", "#categories"], ["Instructors", "#community"], ["For Teams", "#contact"]] },
-  { name: "Company", links: [["About", "#how-it-works"], ["Careers", "#contact"], ["Journal", "#community"]] },
-  { name: "Support", links: [["Help Center", "#contact"], ["Contact", "#contact"], ["Terms", "#contact"], ["Privacy", "#contact"]] },
-];
+import { footerGroups, copy } from "./Footer.copy";
 
 export function Footer() {
   return (
@@ -12,10 +7,10 @@ export function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a href="#top" className="logo inline-flex" aria-label="Luma home">
+            <a href="#top" className="logo inline-flex" aria-label={copy.homeLabel}>
               <Image src="/images/luma-logo.svg" alt="" width={54} height={17} className="brightness-0 invert" />
             </a>
-            <p className="body-1">Practical learning for curious people.</p>
+            <p className="body-1">{copy.description}</p>
           </div>
           {footerGroups.map(({ name, links }) => (
             <nav aria-label={name} key={name}>
@@ -26,7 +21,7 @@ export function Footer() {
             </nav>
           ))}
         </div>
-        <p className="copyright font-inter text-[13px]/[19.5px] font-normal tracking-normal">© 2026 Luma Learning</p>
+        <p className="copyright font-inter text-[13px]/[19.5px] font-normal tracking-normal">{copy.copyright}</p>
       </div>
     </footer>
   );

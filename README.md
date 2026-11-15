@@ -20,7 +20,9 @@ pnpm start
 
 ## Decisions and known gaps
 
-- The route composes section components. Tailwind utilities handle common responsive layouts and typography. Shared Figma tokens live in `app/styles/theme.css`, and styles specific to a section or interaction sit beside the corresponding component.
+- The route composes components from `app/components/sections` and `app/components/layout`. Reusable components live in `app/components/shared`. Component-specific CSS sits beside the component. Tailwind utilities handle common responsive layouts and typography, with shared tokens in `app/styles/theme.css` and common styles in `app/styles/shared.css`.
+- English copy lives in colocated `*.copy.ts` files, including accessible names, image descriptions and form feedback. This keeps text separate from JSX for a future translation integration.
+- The mobile menu and contact form keep state and event handling in colocated hooks. Presentational sections render without client-side state.
 - The mobile and desktop screenshots guided section order and spacing. Tablet uses a two-column category grid and stacks the major page sections until the desktop breakpoint.
 - The header stays visible while scrolling. The supplied mobile design showed the menu closed, so the expanded menu uses vertically stacked navigation links and two side-by-side action buttons. Its opening animation respects reduced-motion preferences.
 - The contact form uses English throughout to match the rest of the page. The learning steps use the mobile reference's sequential numbering on both layouts.

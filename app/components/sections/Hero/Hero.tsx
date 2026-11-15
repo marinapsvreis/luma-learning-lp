@@ -1,13 +1,13 @@
 import Image, { getImageProps } from "next/image";
-import { Avatars } from "./Avatars";
-import { SectionIntro } from "./SectionIntro";
+import { Avatars } from "../../shared/Avatars/Avatars";
+import { SectionIntro } from "../../shared/SectionIntro/SectionIntro";
+import { copy } from "./Hero.copy";
 
 const trustedAvatars = [1, 2, 3].map((index) => `/images/trusted-learner-${index}.png`);
 
-const heroAlt = "Learner working on a laptop";
 const { props: mobileHero } = getImageProps({
   src: "/images/hero-mobile.png",
-  alt: heroAlt,
+  alt: copy.imageAlt,
   width: 346,
   height: 380,
   sizes: "min(90vw, 346px)",
@@ -16,7 +16,7 @@ const { props: mobileHero } = getImageProps({
 });
 const { props: desktopHero } = getImageProps({
   src: "/images/hero.png",
-  alt: heroAlt,
+  alt: copy.imageAlt,
   width: 500,
   height: 520,
   sizes: "min(42vw, 500px)",
@@ -28,22 +28,22 @@ export function Hero() {
       <div className="container split hero-inner">
         <div className="hero-copy">
           <SectionIntro
-            eyebrow="Learn at your own pace"
-            title="Build skills that actually move you forward."
+            eyebrow={copy.eyebrow}
+            title={copy.title}
             heading="h1"
             description={
               <>
-                Practical courses taught by people who do the work
-                <br className="hidden desktop:block" />{" "}every day. Learn design, technology, business and more
-                <br className="hidden desktop:block" />{" "}— one focused lesson at a time.
+                {copy.descriptionLines[0]}
+                <br className="hidden desktop:block" />{" "}{copy.descriptionLines[1]}
+                <br className="hidden desktop:block" />{" "}{copy.descriptionLines[2]}
               </>
             }
           />
           <div className="actions mt-8">
-            <a className="button button-standard px-7 pt-3.5 pb-4 primary" href="#courses">Explore courses</a>
-            <a className="button button-standard px-7 pt-3.5 pb-4 secondary" href="#how-it-works">See how it works</a>
+            <a className="button button-standard px-7 pt-3.5 pb-4 primary" href="#courses">{copy.exploreCourses}</a>
+            <a className="button button-standard px-7 pt-3.5 pb-4 secondary" href="#how-it-works">{copy.seeHowItWorks}</a>
           </div>
-          <div className="trust mt-8"><Avatars sources={trustedAvatars} /><span><strong>Trusted by 24,000+</strong> learners</span></div>
+          <div className="trust mt-8"><Avatars sources={trustedAvatars} /><span><strong>{copy.trustedBy}</strong>{" "}{copy.learners}</span></div>
         </div>
         <div className="hero-visual">
           <div className="hero-media">
@@ -54,11 +54,11 @@ export function Hero() {
               </picture>
             </div>
             <div className="photo-label photo-courses body-1 gap-3">
-              <strong>120+</strong> expert-led courses
+              <strong>{copy.courseCount}</strong>{" "}{copy.expertLedCourses}
             </div>
             <div className="photo-label photo-rating body-1">
               <Image src="/images/rating-stars.svg" alt="" width={78} height={14} />
-              4.9 avg rating
+              {copy.averageRating}
             </div>
           </div>
         </div>
