@@ -14,10 +14,10 @@ export function Header({ locale }: { locale: Locale }) {
   return (
     <header className="site-header" onKeyDown={handleKeyDown}>
       <div className="container header-inner">
-        <a className="logo" href="#top" aria-label={copy.homeLabel}>
-          <Image src="/images/luma-logo.svg" alt="" width={54} height={17} />
-        </a>
-        <div className="ml-auto mr-2 desktop:hidden">
+        <div className="flex items-center gap-3">
+          <a className="logo" href="#top" aria-label={copy.homeLabel}>
+            <Image src="/images/luma-logo.svg" alt="" width={54} height={17} />
+          </a>
           <LanguageSwitcher locale={locale} />
         </div>
         <button
@@ -58,9 +58,6 @@ export function Header({ locale }: { locale: Locale }) {
               ))}
             </nav>
             <div className="header-actions">
-              <div className="hidden desktop:inline-flex">
-                <LanguageSwitcher locale={locale} />
-              </div>
               <Details
                 locale={locale}
                 title={copy.loginTitle}
