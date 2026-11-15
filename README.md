@@ -2,6 +2,11 @@
 
 A responsive landing page for the Buzzvel Front-End Engineer challenge, built with Next.js App Router, TypeScript and Tailwind CSS.
 
+## Live preview
+
+- [English](https://luma-learning-lp.vercel.app/)
+- [Português de Portugal](https://luma-learning-lp.vercel.app/pt)
+
 ## Getting started
 
 Use Node.js 22 or newer and pnpm.
