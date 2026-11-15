@@ -38,7 +38,7 @@ Run `pnpm lint` for the Next.js, React and accessibility rules, and `pnpm format
 - Next.js serves responsive image variants. The hero is prioritized and below-the-fold images are lazy-loaded. Inter and Plus Jakarta Sans are served as local variable WOFF2 fonts through `next/font`.
 - The final call-to-action decoration repeats horizontally on wide desktop screens. Shapes keep their proportions and can be clipped at the section edge. The mobile reference uses a plain background. Decorative placement is approximate.
 - The development and build scripts use webpack because Turbopack's worker resolved to an inactive Node.js shim on the Windows development host.
-- Approximate total time spent on implementation, design refinements and checks: 5 hours.
+- Approximate total time spent on implementation, design refinements and checks: 8 hours.
 
 ## AI and verification
 
